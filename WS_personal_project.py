@@ -22,10 +22,8 @@ imgsrc = ['' for n in range(len(img_element))]
 #getting the second half of the url of the covers
 for n in range(len(img_element)):
     imgsrc[n] = img_element[n].get('src')
-
-# downloading the covers
-for n in range(len(imgsrc)):
-    # specifying only covers by url
+    
+    # downloading the covers, specifying only covers by url
     if 'cover' in imgsrc[n]:
         #getting the source page for the image
         res = requests.get(url + imgsrc[n])
